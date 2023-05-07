@@ -37,6 +37,7 @@ const ProductList = () => {
   useEffect(() => {
     getData();
     setProductsExist(products.length);
+    setProducts([{ sku: "123", name: "213", price: "45", size: "3" }]);
   }, [products]);
 
   return (

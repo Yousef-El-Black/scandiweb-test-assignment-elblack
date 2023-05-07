@@ -4,5 +4,5 @@ export const links = {
   serverLink:
     env === "dev"
       ? "http://localhost"
-      : "https://scandiwebtestassignmentelblack.000webhostapp.com",
+      : "https://scandiweb-test-assignment-elblack.vercel.app",
 };

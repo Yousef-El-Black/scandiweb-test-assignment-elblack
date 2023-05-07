@@ -3,7 +3,6 @@ import { links } from "../environment/environment";
 
 export const saveForm = (e, data) => {
   e.preventDefault();
-  console.log(data);
   const url = `${links.serverLink}/scandiweb-server/postdata.php`;
   axios
     .post(url, data)
@@ -11,6 +10,6 @@ export const saveForm = (e, data) => {
       window.location.href = "/";
     })
     .catch((res) => {
-      console.log("SKU have been used!");
+      console.log("There's some Error!");
     });
 };

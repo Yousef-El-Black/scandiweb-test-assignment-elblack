@@ -1,5 +1,5 @@
 <?php
-$database = 'id20712597_scandiweb	';
+$database = 'id20712597_scandiweb';
 $testdatabase = 'scandiweb';
 $username = 'id20712597_youssef';
 $testusername = 'youssef';

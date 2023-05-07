@@ -45,7 +45,7 @@ const ProductList = () => {
         <div className="title">Product List</div>
         <div className="btns flex justify-content-between align-items-center">
           <button className="px-3 py-2 mx-2" onClick={goToAddProduct}>
-            Add
+            ADD
           </button>
           <button
             className="px-3 py-2 mx-2"
@@ -61,7 +61,7 @@ const ProductList = () => {
               deleteData(deletedProducts);
             }}
           >
-            Mass Delete
+            MASS DELETE
           </button>
         </div>
       </header>
@@ -111,9 +111,12 @@ const ProductList = () => {
                   );
                 })
               ) : (
-                <h1>Data is not Valid!</h1>
+                console.log(products)
               )
             ) : (
+              // (
+              //   <h1>Data is not Valid!</h1>
+              // )
               <h1>No Data to show</h1>
             )}
           </div>

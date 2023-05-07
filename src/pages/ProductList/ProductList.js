@@ -37,7 +37,6 @@ const ProductList = () => {
   useEffect(() => {
     getData();
     setProductsExist(products.length);
-    setProducts([{ sku: "123", name: "213", price: "45", size: "3" }]);
   }, [products]);
 
   return (
@@ -73,43 +72,47 @@ const ProductList = () => {
         <main className="min-height-content my-0">
           <div className="container d-flex p-3 gap-3 w-100 flex-wrap justify-content-center">
             {productsExist ? (
-              products.map((product, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="px-2 py-5 border d-flex flex-column justify-content-center align-items-center col-2 position-relative text-center"
-                    id={product.sku}
-                  >
-                    <input
-                      type="checkbox"
-                      className="delete-checkbox position-absolute"
-                      name="delete-checkbox"
-                      onClick={handleDeleteMass}
-                    />
-                    <p className="m-0">{product.sku}</p>
-                    <p className="m-0">{product.name}</p>
-                    <p className="m-0">{product.price}$</p>
-                    <p className={`m-0 ${product.size == 0 ? "d-none" : ""}`}>
-                      Size: {product.size}MB
-                    </p>
-                    <p className={`${product.weight == 0 ? "d-none" : ""}`}>
-                      Weight: {product.weight}KG
-                    </p>
-                    <p
-                      className={`${
-                        product.width == 0 &&
-                        product.length == 0 &&
-                        product.height == 0
-                          ? "d-none"
-                          : ""
-                      }`}
+              Array.isArray(products) ? (
+                products.map((product, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="px-2 py-5 border d-flex flex-column justify-content-center align-items-center col-2 position-relative text-center"
+                      id={product.sku}
                     >
-                      Dimension: {product.width}x{product.height}x
-                      {product.length}
-                    </p>
-                  </div>
-                );
-              })
+                      <input
+                        type="checkbox"
+                        className="delete-checkbox position-absolute"
+                        name="delete-checkbox"
+                        onClick={handleDeleteMass}
+                      />
+                      <p className="m-0">{product.sku}</p>
+                      <p className="m-0">{product.name}</p>
+                      <p className="m-0">{product.price}$</p>
+                      <p className={`m-0 ${product.size == 0 ? "d-none" : ""}`}>
+                        Size: {product.size}MB
+                      </p>
+                      <p className={`${product.weight == 0 ? "d-none" : ""}`}>
+                        Weight: {product.weight}KG
+                      </p>
+                      <p
+                        className={`${
+                          product.width == 0 &&
+                          product.length == 0 &&
+                          product.height == 0
+                            ? "d-none"
+                            : ""
+                        }`}
+                      >
+                        Dimension: {product.width}x{product.height}x
+                        {product.length}
+                      </p>
+                    </div>
+                  );
+                })
+              ) : (
+                <h1>Data is not Valid!</h1>
+              )
             ) : (
               <h1>No Data to show</h1>
             )}

@@ -1,0 +1,136 @@
+html {
+  box-sizing:border-box;
+  padding: 0;
+  margin: 0;
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// @for $i from 1 through 100 {
+//   .w-#{$i} {
+//     width: #{$i + "%"};
+//   }
+// }
+
+// .block {
+//   display: block;
+// }
+
+// .flex {
+//   display: flex;
+// }
+
+// .flex-column {
+//   flex-direction: column;
+// }
+
+// .justify-content-between {
+//   justify-content: space-between;
+// }
+
+// .justify-content-around {
+//   justify-content: space-around;
+// }
+
+// .align-items-center {
+//   align-items: center;
+// }
+
+// .mx-auto {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+// @for $i from 1 through 10 {
+//   .p-#{$i} {
+//     padding: #{$i * 0.25}rem;
+//   }
+// }
+
+// @for $col from 1 through 12 {
+//   .col-#{$col} {
+//     width: #{calc($col / 12 * 100) + '%'};
+//   }
+// }
+
+// .container {
+//   width: 100%;
+// }
+
+// @media (min-width: 640) {
+//   .container {
+//     max-width: 640px;
+//   }
+// }
+
+// @media (min-width: 768) {
+//   .container {
+//     max-width: 768px;
+//   }
+// }
+
+// @media (min-width: 1024) {
+//   .container {
+//     max-width: 1024px;
+//   }
+// }
+
+// @for $i from 1 through 10 {
+//   .gap-#{$i} {
+//     gap: #{$i * 0.25}rem;
+//   }
+// }
+
+// @for $i from 1 through 10 {
+//   .px-#{$i} {
+//     padding-left: #{$i * 0.25}rem;
+//     padding-right: #{$i * 0.25}rem;
+//   }
+// }
+
+// @for $i from 1 through 10 {
+//   .py-#{$i} {
+//     padding-top: #{$i * 0.25}rem;
+//     padding-bottom: #{$i * 0.25}rem;
+//   }
+// }
+
+// .my-0 {
+//   margin-top: 0;
+//   margin-bottom: 0;
+// }
+
+
+.min-height-content {
+  min-height: calc(100vh - 150px);
+}
+
+
+
+
+
+
+// Functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// // Variable overrides second
+// $primary: #900;
+// $enable-shadows: true;
+// $prefix: "mo-";
+
+// Required Bootstrap imports
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Optional components
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";

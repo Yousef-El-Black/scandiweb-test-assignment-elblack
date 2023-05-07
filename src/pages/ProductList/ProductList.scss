@@ -1,0 +1,29 @@
+header {
+  height: 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  .title {
+    font-size: xx-large;
+    font-weight: 600;
+  }
+  .btns {
+    button {
+      background-color: white;
+      border: 1px solid black;
+      color: black;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+  }
+}
+
+main {
+  .delete-checkbox {
+    top: 10px;
+    left: 10px;
+  }
+}
